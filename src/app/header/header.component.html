@@ -1,0 +1,79 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-2">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            [routerLink]="['/']"
+            [routerLinkActiveOptions]="{ exact: true }"
+            [routerLinkActive]="['is-active']"
+            class="nav-link active"
+            aria-current="page"
+            href="#"
+            >Home</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a
+            [routerLink]="['contact']"
+            [routerLinkActive]="['is-active']"
+            class="nav-link"
+            href="#"
+            >contact</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            [routerLink]="['pipes']"
+            [routerLinkActive]="['is-active']"
+            class="nav-link"
+            href="#"
+            >pipes</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            [routerLink]="['gallery']"
+            [routerLinkActive]="['is-active']"
+            class="nav-link"
+            href="#"
+            >Galleyr</a
+          >
+        </li>
+        <li class="nav-item" *ngIf="manuLink">
+          <a
+            [routerLink]="['pipes']"
+            [routerLinkActive]="['is-active']"
+            class="nav-link"
+            href="#"
+            >Pipe Link</a
+          >
+        </li>
+      </ul>
+    </div>
+    <form class="d-flex" *ngIf="loginBtn">
+      <button class="btn btn-outline-warning" type="submit">Login</button>
+    </form>
+    <div *ngIf="conDitails" class="text-white" style="line-height: 17px">
+      <small style="padding: 9px 0">
+        <strong class="text-dark">Email : </strong>
+        test@gamil.com
+      </small>
+      <br />
+      <small><strong class="text-dark">Number : </strong> 9876543210</small>
+    </div>
+  </div>
+</nav>

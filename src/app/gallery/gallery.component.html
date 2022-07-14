@@ -1,0 +1,13 @@
+<div class="row gallery-div text-left">
+  <div class="col-md-12 px-5 py-5">
+    <h1>Our Gallery</h1>
+  </div>
+  <div class="row d-flex justify-content-center mx-auto">
+    <div class="col-md-3 img-gallery" *ngFor="let item of galleryImages">
+      <a class="item" routerLink="1">
+        <figure><img class="img-fluid" [src]="item.imgUrl" alt="" /></figure>
+        <h6>{{ item.title }}</h6>
+      </a>
+    </div>
+  </div>
+</div>

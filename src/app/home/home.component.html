@@ -1,0 +1,29 @@
+<div class="row py-5">
+  <div class="col-md-12 text-center">
+    <h1>Home</h1>
+  </div>
+
+  <div #box class="col-md-12 text-center">
+    <h3>
+      User Name Is : <strong>{{ userName }}</strong>
+    </h3>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <app-child>
+      <p #childContent>This is ng content paragraph</p>
+    </app-child>
+  </div>
+  <div class="col-md-6">
+    <button
+      (click)="changeChildProperty()"
+      class="btn btn-outline-success me-2"
+    >
+      Change Child Property
+    </button>
+    <button (click)="callChildMethod()" class="btn btn-outline-warning">
+      Call Child Method
+    </button>
+  </div>
+</div>

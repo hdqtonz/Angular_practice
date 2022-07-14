@@ -1,0 +1,109 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="justify-content-center d-flex">
+      <h4 style="font-weight: bold">Simple Pipes</h4>
+    </div>
+    <div class="">
+      <!-- <p>{{ text | uppercase }}</p> -->
+      <!-- <p>{{ text | lowercase }}</p> -->
+      <!-- <p>{{ date | date: "short" }}</p> -->
+      <!-- <p>{{ date | date: "fullDate" | uppercase }}</p>  -->
+      <!--Pipe order meters in angular check below example -->
+      <!-- <p>{{ date | uppercase | date: "fullDate" }}</p> -->
+
+      <p>{{ text | slice: 4:15 }}</p>
+
+      <p>{{ date | date: "fullDate" | uppercase }}</p>
+
+      <p>{{ text | shine: 15 }}</p>
+
+      <ul>
+        <li *ngFor="let name of someName">{{ name | shine: 15 }}</li>
+      </ul>
+    </div>
+  </div>
+  <hr />
+  <hr />
+  <div class="row">
+    <h5>User Data</h5>
+    <div class="com-md-12">
+      <table class="table">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let list of data; let i = index">
+            <th>{{ i + 1 }}</th>
+            <td>{{ list.name }}</td>
+            <td>{{ list.last }}</td>
+            <td>{{ list.handle }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <hr />
+  <hr />
+
+  <div class="row">
+    <h5>Product Data</h5>
+    <div class="col-md-12">
+      <form action="">
+        <div class="mb-3">
+          <label class="from-label">Add </label>
+          <div class="input-group">
+            <input type="text" #add class="form-control" />
+
+            <div class="input-group-append">
+              <button
+                class="btn btn-outline-secondary"
+                (click)="onAddNewProduct(add)"
+                type="button"
+              >
+                Add New
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Search</label>
+          <input
+            [(ngModel)]="nameSearch"
+            name="search"
+            type="text"
+            class="form-control"
+          />
+        </div>
+      </form>
+    </div>
+    <div class="com-md-12 mb-5">
+      <table class="table">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Availabilty</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            *ngFor="let product of Products | filter: nameSearch; let i = index"
+          >
+            <th>{{ 1 + i }}</th>
+            <td>{{ product.name }}</td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.avalible }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

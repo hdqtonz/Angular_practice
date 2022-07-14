@@ -1,0 +1,20 @@
+<div class="alert alert-danger p-5" appTest role="alert">
+  <h6>
+    User Name : <strong>{{ nameValue }}</strong>
+  </h6>
+  <ng-content></ng-content>
+  <div class="input-group">
+    <!-- <input class="form-control" type="text" /> -->
+    <div class="input-group-append">
+      <button (click)="clickMe()" class="btn btn-secondary">Update</button
+      >&nbsp;
+      <button (click)="changeColor('red')" class="btn btn-secondary">
+        Red
+      </button>
+      &nbsp;
+      <button (click)="changeColor('green')" class="btn btn-secondary">
+        Green
+      </button>
+    </div>
+  </div>
+</div>
