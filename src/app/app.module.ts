@@ -15,6 +15,11 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { GalleryItems } from './Models/gallery';
 import { ChildComponent } from './child/child.component';
 import { TestDirective } from './directives/test.directive';
+import { Com1Component } from './com1/com1.component';
+import { Com2Component } from './com2/com2.component';
+import { Com3Component } from './com3/com3.component';
+import { Com4Component } from './com4/com4.component';
+import { DropdwonDirective } from './directives/dropdwon.directive';
 
 @NgModule({
   declarations: [
@@ -28,6 +33,11 @@ import { TestDirective } from './directives/test.directive';
     GalleryComponent,
     ChildComponent,
     TestDirective,
+    Com1Component,
+    Com2Component,
+    Com3Component,
+    Com4Component,
+    DropdwonDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [GalleryItems],

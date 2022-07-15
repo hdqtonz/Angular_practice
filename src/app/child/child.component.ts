@@ -26,13 +26,14 @@ export class ChildComponent implements OnInit, AfterContentInit {
 
   clickMe() {
     alert(this.nameValue);
-    var text = this.renderer.createText(' this text is created by renderer');
+    // var text = this.renderer.createText(' this text is created by renderer');
+    const text = this.renderer.createText(' And adding new text');
     this.renderer.appendChild(this.childPara.nativeElement, text);
   }
   //------------With Content Child we allways use ngAfterContentInit----------//
   ngAfterContentInit(): void {
     console.log(this.childPara);
-    this.renderer.setStyle(this.childPara.nativeElement, 'color', 'red');
+    this.renderer.setStyle(this.childPara.nativeElement, 'color', 'white');
   }
 
   changeColor(color: string) {

@@ -1,3 +1,54 @@
 .myClass {
-  border: 2px solid black;
+  border: 1px solid black;
+}
+.home-title {
+  border: 1px solid black;
+  padding: 20px;
+}
+.container {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: antiquewhite;
+}
+
+.dropdwon-header {
+  border: 1px solid lightgray;
+  display: block;
+  text-align: left;
+  padding: 8px;
+  line-height: 1.2;
+
+  position: relative;
+}
+.dropdwon-header.active + .dropdwon-content {
+  display: block;
+}
+
+.dropdwon-header::after {
+  content: "";
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  right: 12px;
+  border-left: 2px solid #686868;
+  border-bottom: 2px solid #686868;
+  transform: rotate(-45deg);
+}
+
+.dropdwon-content {
+  border: 1px solid #d5bebe;
+  display: none;
+}
+
+.dropdwon-content a {
+  display: block;
+  text-align: left;
+  padding: 5px 12px;
+  text-decoration: none;
+}
+
+.dropdwon-content a:hover {
+  background: #f5f5f5;
+  text-decoration: none;
 }

@@ -2,6 +2,7 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
+  HostListener,
   OnDestroy,
   OnInit,
   Renderer2,
@@ -9,7 +10,9 @@ import {
 } from '@angular/core';
 import { ChildComponent } from '../child/child.component';
 import { MyserviceService } from '../service/myservice.service';
+// import * as $ from 'jquery';
 
+declare var $: any;
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -35,8 +38,8 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
 
     console.log(this.child);
     //------------User renderer with @ViewChild() to change dom property------------//
-    this.renderer.setStyle(this.box.nativeElement, 'backgroundColor', 'green');
-    this.renderer.setStyle(this.box.nativeElement, 'color', 'white');
+    this.renderer.setStyle(this.box.nativeElement, 'backgroundColor', 'orange');
+    this.renderer.setStyle(this.box.nativeElement, 'color', 'black');
 
     this.renderer.addClass(this.box.nativeElement, 'myClass');
     this.renderer.setAttribute(
@@ -48,7 +51,16 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
 
   ngOnInit(): void {
     this._header.headerLoginBtn.next(true);
+
+    //   $(window).scroll(function () {
+    //     // console.log('window scrolling');
+    //   });
   }
+
+  // @HostListener('window:scroll', ['$event']) myScroll() {
+  //   console.log('Scrolling');
+  // }
+
   ngOnDestroy(): void {
     this._header.headerLoginBtn.next(false);
   }
@@ -60,4 +72,8 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   callChildMethod() {
     this.child.clickMe();
   }
+
+  // @HostListener('click') myClikc() {
+  //   alert('Clicked');
+  // }
 }

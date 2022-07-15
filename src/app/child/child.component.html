@@ -6,10 +6,15 @@
   <div class="input-group">
     <!-- <input class="form-control" type="text" /> -->
     <div class="input-group-append">
-      <button (click)="clickMe()" class="btn btn-secondary">Update</button
+      <button
+        (click)="clickMe()"
+        (click)="changeColor('#42ba96')"
+        class="btn btn-secondary"
+      >
+        Update</button
       >&nbsp;
-      <button (click)="changeColor('red')" class="btn btn-secondary">
-        Red
+      <button (click)="changeColor('orange')" class="btn btn-secondary">
+        Orange
       </button>
       &nbsp;
       <button (click)="changeColor('green')" class="btn btn-secondary">

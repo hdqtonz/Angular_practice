@@ -3,7 +3,11 @@
     <h1>Our Gallery</h1>
   </div>
   <div class="row d-flex justify-content-center mx-auto">
-    <div class="col-md-3 img-gallery" *ngFor="let item of galleryImages">
+    <div
+      class="col-md-3 img-gallery"
+      *ngFor="let item of galleryImages"
+      appTest
+    >
       <a class="item" routerLink="1">
         <figure><img class="img-fluid" [src]="item.imgUrl" alt="" /></figure>
         <h6>{{ item.title }}</h6>
