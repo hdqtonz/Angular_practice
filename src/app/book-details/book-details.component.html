@@ -1,0 +1,9 @@
+<h3>Book Details Component</h3>
+<ul>
+  <li *ngFor="let book of books">
+    <b>Id : </b>{{ book.id }} <b>Name : </b>{{ book.name }} <b>Author : </b
+    >{{ book.author }}
+  </li>
+</ul>
+
+<button type="button" (click)="close()">CLOSE</button>

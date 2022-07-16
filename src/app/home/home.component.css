@@ -25,6 +25,11 @@
   display: block;
 }
 
+.dropdwon-header.active::after {
+  top: 15px;
+  transform: rotate(135deg);
+}
+
 .dropdwon-header::after {
   content: "";
   height: 15px;
@@ -46,6 +51,8 @@
   text-align: left;
   padding: 5px 12px;
   text-decoration: none;
+  color: black;
+  border-bottom: 1px solid #7777;
 }
 
 .dropdwon-content a:hover {

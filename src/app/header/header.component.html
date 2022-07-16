@@ -53,6 +53,33 @@
             >Galleyr</a
           >
         </li>
+        <li class="nav-item">
+          <a
+            [routerLink]="['company']"
+            [routerLinkActive]="['is-active']"
+            class="nav-link"
+            href="#"
+            >Company</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            [routerLink]="['person']"
+            [routerLinkActive]="['is-active']"
+            class="nav-link"
+            href="#"
+            >Person</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            [routerLink]="['books']"
+            [routerLinkActive]="['is-active']"
+            class="nav-link"
+            href="#"
+            >Books</a
+          >
+        </li>
         <li class="nav-item" *ngIf="manuLink">
           <a
             [routerLink]="['pipes']"

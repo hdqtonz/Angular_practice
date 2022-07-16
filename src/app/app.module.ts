@@ -20,6 +20,10 @@ import { Com2Component } from './com2/com2.component';
 import { Com3Component } from './com3/com3.component';
 import { Com4Component } from './com4/com4.component';
 import { DropdwonDirective } from './directives/dropdwon.directive';
+import { CompanyComponent } from './company/company.component';
+import { PersonComponent } from './person/person.component';
+import { BookComponent } from './book/book.component';
+import { BookDetailsComponent } from './book-details/book-details.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +42,10 @@ import { DropdwonDirective } from './directives/dropdwon.directive';
     Com3Component,
     Com4Component,
     DropdwonDirective,
+    CompanyComponent,
+    PersonComponent,
+    BookComponent,
+    BookDetailsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [GalleryItems],

@@ -10,7 +10,7 @@ import {
   selector: '[appTest]',
 })
 export class TestDirective {
-  constructor(private el: ElementRef, private renderer: Renderer2) {
+  constructor(private el: ElementRef<any>, private renderer: Renderer2) {
     this.renderer.setStyle(this.el.nativeElement, 'backgroundColor', '#42ba96');
   }
 
@@ -28,12 +28,12 @@ export class TestDirective {
   }
 
   @HostListener('mouseover') myMouseOver() {
-    this.renderer.setStyle(this.el.nativeElement, 'backgroundColor', '#f24f4d');
+    this.renderer.setStyle(this.el.nativeElement, 'backgroundColor', '#f24f4d'); //f24f4d
     this.renderer.setStyle(this.el.nativeElement, 'color', 'white');
   }
 
   @HostListener('mouseout') myMouseOut() {
-    this.renderer.setStyle(this.el.nativeElement, 'backgroundColor', '#42ba96');
+    this.renderer.setStyle(this.el.nativeElement, 'backgroundColor', '#42ba96'); //42ba96
     this.renderer.setStyle(this.el.nativeElement, 'color', 'black');
   }
 }

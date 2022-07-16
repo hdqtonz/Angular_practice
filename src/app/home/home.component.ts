@@ -21,6 +21,7 @@ declare var $: any;
 export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   userName: any = 'Hiten';
   @ViewChild('box') box!: ElementRef<any>;
+  @ViewChild('myTest') myTest!: ElementRef<any>;
 
   @ViewChild(ChildComponent) child!: ChildComponent;
 
@@ -36,7 +37,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     // this.box.nativeElement.classList = 'boxblue';
     // this.box.nativeElement.innerHTML = 'This is modified HTML';
 
-    console.log(this.child);
+    // console.log(this.child);
     //------------User renderer with @ViewChild() to change dom property------------//
     this.renderer.setStyle(this.box.nativeElement, 'backgroundColor', 'orange');
     this.renderer.setStyle(this.box.nativeElement, 'color', 'black');
@@ -47,6 +48,13 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       'title',
       'This is a test title'
     );
+
+    console.log(this.myTest.nativeElement);
+    this.myTest.nativeElement.innerHTML = 'Hello Keshyap';
+
+    this.renderer.listen(this.myTest.nativeElement, 'click', () => {
+      alert('My test viwe child');
+    });
   }
 
   ngOnInit(): void {

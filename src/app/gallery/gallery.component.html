@@ -8,7 +8,7 @@
       *ngFor="let item of galleryImages"
       appTest
     >
-      <a class="item" routerLink="1">
+      <a class="item" appTest routerLink="1">
         <figure><img class="img-fluid" [src]="item.imgUrl" alt="" /></figure>
         <h6>{{ item.title }}</h6>
       </a>
