@@ -1,0 +1,99 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card-header text-center">
+        <h3>Ng-Template</h3>
+        <h6>Ng tamplate only use with structural directive</h6>
+        <p style="text-decoration: underline">
+          And we don't need to specify * symbol in the structural directive, we
+          use [ngIf] instead of * because of ng-template.
+          <b>(* means ng-template)</b>
+        </p>
+      </div>
+    </div>
+  </div>
+  <hr />
+
+  <div class="row">
+    <div class="col-md-12">
+      <!-- Normal Div with structural directive -->
+      <div *ngIf="displayDiv">Dive Text</div>
+    </div>
+    <!-- Ng-tamplate with structural directive -->
+    <ng-template [ngIf]="displayTemplate"> ng-template text </ng-template>
+  </div>
+
+  <hr />
+
+  <!-- ng-template example with ngIf and else -->
+  <div class="row">
+    <div class="col-md-12">
+      <h5>Ng-template example with ngIf and else</h5>
+    </div>
+    <div class="col-md-12">
+      <!-- A div with ngIf and else -->
+      <div *ngIf="displayDiv; else template">hello from Div</div>
+      <ng-template #template> hello form ng-template </ng-template>
+    </div>
+  </div>
+
+  <hr />
+  <!-- ng-template example with ngFor -->
+  <div class="row">
+    <div class="col-md-12">
+      <h5>Ng-template example with Ngfor</h5>
+    </div>
+    <div class="col-md-12">
+      <!-- A div with ngFor -->
+      <h6>div with ngFor</h6>
+      <div *ngFor="let book of books; let i = index">
+        {{ i + 1 }}, {{ book.name }} : {{ book.price }}
+      </div>
+
+      <!-- A ng-template with ngFor -->
+      <h6>ng-template with ngFor</h6>
+      <ng-template ngFor let-book [ngForOf]="books" let-i="index">
+        <p>{{ i + 1 }}, {{ book.name }} : {{ book.price }}</p>
+      </ng-template>
+    </div>
+  </div>
+  <!-- container End -->
+
+  <div class="row">
+    <div class="col-md-12">
+      <!-- ng Switch with ng tamplate -->
+      <h6>Ng Switch with div</h6>
+
+      <div [ngSwitch]="'Angular'">
+        <!-- the same view can be shown in more than one case -->
+        <p *ngSwitchCase="'ReactJs'">I am a ReactJs Devloper</p>
+        <p *ngSwitchCase="'Angular'">I am a Angular Devloper</p>
+        <p *ngSwitchCase="'MongoDb'">I am a MongoDb Manager</p>
+        <!--default case when there are no matches -->
+        <p *ngSwitchDefault>Default Switch Case</p>
+      </div>
+
+      <!-- ng Switch with ng tamplate -->
+      <h6>Ng Switch with ng-template</h6>
+
+      <div [ngSwitch]="'React'">
+        <!-- the same view can be shown in more than one case -->
+
+        <ng-template [ngSwitchCase]="'Angular'">
+          <p>I am a Angular Devloper</p>
+        </ng-template>
+
+        <ng-template [ngSwitchCase]="'ReactJs'"
+          ><p>I am a ReactJs Devloper</p></ng-template
+        >
+
+        <ng-template [ngSwitchCase]="'MongoDb'">
+          <p>I am a MongoDb Manager</p></ng-template
+        >
+
+        <!--default case when there are no matches -->
+        <ng-template [ngSwitchDefault]> <p>Default Switch Case</p></ng-template>
+      </div>
+    </div>
+  </div>
+</div>

@@ -24,6 +24,13 @@ import { CompanyComponent } from './company/company.component';
 import { PersonComponent } from './person/person.component';
 import { BookComponent } from './book/book.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
+import { BooksService } from './service/books.service';
+import { NgTemplateComponent } from './ng-template/ng-template.component';
+import { NgContainerComponent } from './ng-container/ng-container.component';
+import { CounterComponent } from './counter/counter.component';
+import { CounterParentComponent } from './counter-parent/counter-parent.component';
+import { ChangecolorDirective } from './directives/changecolor.directive';
+import { ParentColorComponent } from './parent-color/parent-color.component';
 
 @NgModule({
   declarations: [
@@ -46,9 +53,15 @@ import { BookDetailsComponent } from './book-details/book-details.component';
     PersonComponent,
     BookComponent,
     BookDetailsComponent,
+    NgTemplateComponent,
+    NgContainerComponent,
+    CounterComponent,
+    CounterParentComponent,
+    ChangecolorDirective,
+    ParentColorComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
-  providers: [GalleryItems],
+  providers: [GalleryItems, BooksService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

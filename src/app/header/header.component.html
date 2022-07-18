@@ -80,6 +80,51 @@
             >Books</a
           >
         </li>
+        <li class="nav-item">
+          <a
+            [routerLink]="[{ outlets: { bookList: 'book-detail' } }]"
+            [routerLinkActive]="['is-active']"
+            class="nav-link"
+            href="#"
+            >Books Details</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            [routerLink]="['ng-template']"
+            [routerLinkActive]="['is-active']"
+            class="nav-link"
+            href="#"
+            >ng-template</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            [routerLink]="['ng-container']"
+            [routerLinkActive]="['is-active']"
+            class="nav-link"
+            href="#"
+            >ng-container</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            [routerLink]="['counter-parent']"
+            [routerLinkActive]="['is-active']"
+            class="nav-link"
+            href="#"
+            >counter-parent</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            [routerLink]="['parent-color']"
+            [routerLinkActive]="['is-active']"
+            class="nav-link"
+            href="#"
+            >parent-color</a
+          >
+        </li>
         <li class="nav-item" *ngIf="manuLink">
           <a
             [routerLink]="['pipes']"

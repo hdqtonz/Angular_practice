@@ -1,0 +1,82 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card-header text-center text-white">
+        <h3>Ng-Container</h3>
+      </div>
+      <div class="alert alert-primary" role="alert">
+        <p class="text-center text-dark">
+          If we have a situation to use "Two Structural Directive" in one DOM
+          element, in that case, we use
+          <strong> "< ng-container >"</strong>. because angular does not allow
+          us to use two directives in one DOM element.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ng-container with table-->
+  <br />
+  <hr />
+  <div class="row">
+    <h5>ng-container with table</h5>
+    <div class="col-md-12">
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let book of books; let i = index">
+            <tr *ngIf="book.id > 1">
+              <td>{{ i + 1 }}</td>
+              <td>{{ book.name }}</td>
+              <td>{{ book.price }}</td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ng-container with div -->
+  <br />
+  <hr />
+  <div class="row">
+    <h5>ng-container with div</h5>
+    <div class="col-md-12">
+      <ng-container *ngIf="display">
+        <div *ngFor="let book of books">{{ book.name }}</div>
+      </ng-container>
+    </div>
+  </div>
+
+  <!-- ng-container with ul/li -->
+  <br />
+  <hr />
+  <div class="row">
+    <h5>ng-container with ul/li</h5>
+    <div class="col-md-12">
+      <ul>
+        <ng-container *ngFor="let book of books">
+          <li *ngIf="display">{{ book.name }}</li>
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ng-container with ng-template -->
+  <br />
+  <hr />
+  <div class="row">
+    <h5>ng-container with ng-template</h5>
+    <div class="col-md-12">
+      <ng-container *ngTemplateOutlet="template; context: obj"> </ng-container>
+
+      <ng-template #template let-ob="name"> {{ ob }} </ng-template>
+    </div>
+  </div>
+</div>
