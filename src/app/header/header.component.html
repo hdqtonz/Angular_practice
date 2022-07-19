@@ -125,6 +125,54 @@
             >parent-color</a
           >
         </li>
+        <li class="nav-item">
+          <a
+            [routerLink]="['theme']"
+            [routerLinkActive]="['is-active']"
+            class="nav-link"
+          >
+            Theme
+          </a>
+        </li>
+        <!-- Guards Dropdown -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Guards
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <!-- Admin -->
+            <li>
+              <a [routerLink]="['admin']" class="dropdown-item" href=""
+                >Admin</a
+              >
+            </li>
+            <!-- Merchant -->
+            <li>
+              <a [routerLink]="['merchant']" class="dropdown-item" href="">
+                Merchant
+              </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Guards Dropdown End -->
+
+        <li class="nav-item">
+          <a
+            [routerLink]="['country/country-list']"
+            [routerLinkActive]="['is-active']"
+            class="nav-link"
+          >
+            Country
+          </a>
+        </li>
+
         <li class="nav-item" *ngIf="manuLink">
           <a
             [routerLink]="['pipes']"

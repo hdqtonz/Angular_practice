@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card-header text-center">
+      <h4>Country Details with Resolver</h4>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <div *ngIf="country">
+      <p><b>Id :</b> {{ country.countryId }}</p>
+      <p><b>Name :</b>{{ country.name }}</p>
+      <p><b>Capital :</b>{{ country.capital }}</p>
+      <p><b>Currency :</b>{{ country.currency }}</p>
+    </div>
+  </div>
+</div>

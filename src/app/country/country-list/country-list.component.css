@@ -1,0 +1,7 @@
+.card-header {
+  border-radius: 0%;
+  background-color: lightcoral;
+}
+.active {
+  background-color: black;
+}

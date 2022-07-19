@@ -1,0 +1,32 @@
+<div class="container mt-2">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-10 text-center">
+      <div class="card-header">
+        <h4>Country Lists</h4>
+        <p>Child of Country component/module</p>
+      </div>
+    </div>
+
+    <div class="col-md-10 my-5">
+      <div *ngFor="let country of countries">
+        <p>
+          Name: {{ country.name }}
+          <a
+            [routerLink]="['detail', country.countryId]"
+            class="btn btn-outline-primary btn-sm"
+            routerLinkActive="active"
+            href=""
+            >View</a
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-9">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

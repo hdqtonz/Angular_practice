@@ -1,17 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminComponent } from './admin/admin.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { BookComponent } from './book/book.component';
 import { CompanyComponent } from './company/company.component';
 import { ContactComponent } from './contact/contact.component';
 import { CounterParentComponent } from './counter-parent/counter-parent.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { ActiveteGuard } from './guards/activete.guard';
+import { DeactiveteGuard } from './guards/deactivete.guard';
 import { HomeComponent } from './home/home.component';
+import { MerchantComponent } from './merchant/merchant.component';
 import { MypipeComponent } from './mypipe/mypipe.component';
 import { NgContainerComponent } from './ng-container/ng-container.component';
 import { NgTemplateComponent } from './ng-template/ng-template.component';
 import { ParentColorComponent } from './parent-color/parent-color.component';
 import { PersonComponent } from './person/person.component';
+import { ThemeComponent } from './theme/theme.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -26,6 +31,19 @@ const routes: Routes = [
   { path: 'ng-container', component: NgContainerComponent },
   { path: 'counter-parent', component: CounterParentComponent },
   { path: 'parent-color', component: ParentColorComponent },
+  { path: 'theme', component: ThemeComponent },
+  { path: 'admin', component: AdminComponent, canActivate: [ActiveteGuard] },
+  {
+    path: 'merchant',
+    component: MerchantComponent,
+    canDeactivate: [DeactiveteGuard],
+  },
+
+  {
+    path: 'country',
+    loadChildren: () =>
+      import('./country/country.module').then((m) => m.CountryModule),
+  },
 
   { path: '**', redirectTo: '' },
 ];

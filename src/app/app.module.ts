@@ -31,6 +31,13 @@ import { CounterComponent } from './counter/counter.component';
 import { CounterParentComponent } from './counter-parent/counter-parent.component';
 import { ChangecolorDirective } from './directives/changecolor.directive';
 import { ParentColorComponent } from './parent-color/parent-color.component';
+import { ThemeComponent } from './theme/theme.component';
+import { AdminComponent } from './admin/admin.component';
+import { ActiveteGuard } from './guards/activete.guard';
+import { MerchantComponent } from './merchant/merchant.component';
+import { DeactiveteGuard } from './guards/deactivete.guard';
+import { CountryComponent } from './country/country.component';
+import { CountryListComponent } from './country/country-list/country-list.component';
 
 @NgModule({
   declarations: [
@@ -59,9 +66,14 @@ import { ParentColorComponent } from './parent-color/parent-color.component';
     CounterParentComponent,
     ChangecolorDirective,
     ParentColorComponent,
+    ThemeComponent,
+    AdminComponent,
+    MerchantComponent,
+    CountryComponent,
+    CountryListComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
-  providers: [GalleryItems, BooksService],
+  providers: [GalleryItems, BooksService, ActiveteGuard, DeactiveteGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
