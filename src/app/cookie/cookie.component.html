@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card-header text-white text-center">
+        <h3>Cookie Component</h3>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <button class="btn btn-success w-100 mt-2" (click)="setSomeCookie()">
+        Set Cookie
+      </button>
+      <button class="btn btn-primary w-100 mt-2" (click)="checkCookie()">
+        Check Cookie
+      </button>
+      <button class="btn btn-primary w-100 mt-2" (click)="getCookieValue()">
+        Get Cookie Value
+      </button>
+      <button class="btn btn-danger w-100 mt-2" (click)="deleteCookieValue()">
+        Delete Cookie Value
+      </button>
+      <h5>Cookie Value : {{ cookieValue }}</h5>
+    </div>
+  </div>
+</div>

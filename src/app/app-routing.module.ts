@@ -5,12 +5,14 @@ import { BookDetailsComponent } from './book-details/book-details.component';
 import { BookComponent } from './book/book.component';
 import { CompanyComponent } from './company/company.component';
 import { ContactComponent } from './contact/contact.component';
+import { CookieComponent } from './cookie/cookie.component';
 import { CounterParentComponent } from './counter-parent/counter-parent.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ActiveteGuard } from './guards/activete.guard';
 import { DeactiveteGuard } from './guards/deactivete.guard';
 import { HomeComponent } from './home/home.component';
 import { MerchantComponent } from './merchant/merchant.component';
+import { MessageComponent } from './message/message.component';
 import { MypipeComponent } from './mypipe/mypipe.component';
 import { NgContainerComponent } from './ng-container/ng-container.component';
 import { NgTemplateComponent } from './ng-template/ng-template.component';
@@ -33,6 +35,8 @@ const routes: Routes = [
   { path: 'parent-color', component: ParentColorComponent },
   { path: 'theme', component: ThemeComponent },
   { path: 'admin', component: AdminComponent, canActivate: [ActiveteGuard] },
+  { path: 'cookie', component: CookieComponent },
+  { path: 'message', component: MessageComponent },
   {
     path: 'merchant',
     component: MerchantComponent,

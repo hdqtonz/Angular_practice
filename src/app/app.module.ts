@@ -24,7 +24,6 @@ import { CompanyComponent } from './company/company.component';
 import { PersonComponent } from './person/person.component';
 import { BookComponent } from './book/book.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
-import { BooksService } from './service/books.service';
 import { NgTemplateComponent } from './ng-template/ng-template.component';
 import { NgContainerComponent } from './ng-container/ng-container.component';
 import { CounterComponent } from './counter/counter.component';
@@ -33,11 +32,13 @@ import { ChangecolorDirective } from './directives/changecolor.directive';
 import { ParentColorComponent } from './parent-color/parent-color.component';
 import { ThemeComponent } from './theme/theme.component';
 import { AdminComponent } from './admin/admin.component';
-import { ActiveteGuard } from './guards/activete.guard';
 import { MerchantComponent } from './merchant/merchant.component';
-import { DeactiveteGuard } from './guards/deactivete.guard';
 import { CountryComponent } from './country/country.component';
 import { CountryListComponent } from './country/country-list/country-list.component';
+import { CookieComponent } from './cookie/cookie.component';
+import { MessageComponent } from './message/message.component';
+import { NumberOneComponent } from './number-one/number-one.component';
+import { NumberTwoComponent } from './number-two/number-two.component';
 
 @NgModule({
   declarations: [
@@ -71,9 +72,13 @@ import { CountryListComponent } from './country/country-list/country-list.compon
     MerchantComponent,
     CountryComponent,
     CountryListComponent,
+    CookieComponent,
+    MessageComponent,
+    NumberOneComponent,
+    NumberTwoComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
-  providers: [GalleryItems, BooksService, ActiveteGuard, DeactiveteGuard],
+  providers: [GalleryItems],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

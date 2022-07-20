@@ -22,12 +22,16 @@ export class DetailComponent implements OnInit {
     //   this.country = res;
     // });
 
-    this.route.paramMap.subscribe((param) => {
-      this.id = param.get('countryId');
+    // this.route.paramMap.subscribe((param) => {
+    //   this.id = param.get('countryId');
 
-      this.countryService.getCountriesById(this.id).subscribe((res) => {
-        this.country = res;
-      });
+    //   this.countryService.getCountriesById(this.id).subscribe((res) => {
+    //     this.country = res;
+    //   });
+    // });
+
+    this.route.paramMap.subscribe((param) => {
+      this.country = this.route.snapshot.data['countryDetail'];
     });
   }
 }

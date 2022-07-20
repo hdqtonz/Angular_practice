@@ -173,6 +173,26 @@
           </a>
         </li>
 
+        <li class="nav-item">
+          <a
+            [routerLink]="['cookie']"
+            [routerLinkActive]="['is-active']"
+            class="nav-link"
+          >
+            Cookie
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a
+            [routerLink]="['message']"
+            [routerLinkActive]="['is-active']"
+            class="nav-link"
+          >
+            Message
+          </a>
+        </li>
+
         <li class="nav-item" *ngIf="manuLink">
           <a
             [routerLink]="['pipes']"

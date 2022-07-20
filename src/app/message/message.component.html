@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card-header">
+        <h3>Services and ProviderIn</h3>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <button class="btn btn-primary mb-3 w-100" (click)="getMessage()">
+        Get Message
+      </button>
+      <h4><b class="text-success"> Message From Service : </b>{{ message }}</h4>
+      <h4>
+        <b class="text-success"> Othter Message From Service : </b
+        >{{ othermessage }}
+      </h4>
+    </div>
+  </div>
+  <br />
+  <hr />
+  <hr />
+  <br />
+
+  <!-- Number Component New Service Example -->
+  <div class="d-flex justify-content-center">
+    <!-- Number One Component -->
+    <div class="row">
+      <div class="col-md-12">
+        <app-number-one> </app-number-one>
+      </div>
+    </div>
+    <hr />
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <!-- Number Two Component -->
+    <div class="row">
+      <div class="col-md-12">
+        <app-number-two> </app-number-two>
+      </div>
+    </div>
+  </div>
+</div>
